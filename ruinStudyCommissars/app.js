@@ -5,11 +5,13 @@
 
 var express = require('express');
 var routes = require('./routes');
-var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 var partials = require("express-partials");
 var app = express();
+var MongoStore = require('connect-mongo')(express);
+var settings = require('./settings');
+var flash = require('connect-flash');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -20,9 +22,17 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
-app.use(app.router);
+app.use(express.cookieParser());
+app.use(express.session({
+	secret: settings.cookieSecret,
+	store: new MongoStore({
+		db: settings.db
+	})
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(partials());
+app.use(flash());
+app.use(app.router);
 
 // development only
 if ('development' == app.get('env')) {
@@ -30,7 +40,9 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/users', user.list);
+//app.get('/users', user.list);
+app.get('/reg', routes.reg_get);
+app.post('/reg', routes.reg_post);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
