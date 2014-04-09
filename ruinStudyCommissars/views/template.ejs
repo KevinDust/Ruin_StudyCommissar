@@ -1,0 +1,133 @@
+<!-- Bootstrap使用模板，
+     将例子部分删除，添加自己的代码即可使用
+    ================================================== -->
+
+
+<!--==========================head部分===========================================================-->
+<!--=============================================================================================-->
+  <%- include head %>
+
+  <!--输入该页面对应的css和参数-->
+
+<!--例子：
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+<link href="/stylesheets/page_userInfo.css" rel="stylesheet">
+
+例子end-->
+  
+  </head>
+<!--=========================head end============================================================-->
+<!--=============================================================================================-->
+
+
+
+<!--==========================body部分===========================================================-->
+<!--=============================================================================================-->
+  <body>
+    <!--整个页面分为三部分：header部分，content部分，footer部分-->
+    <div class="container">
+
+
+
+<!--==========================header部分==============================================-->
+      <div class="header">
+        <!--输入header部分的html，可以用include-->
+
+<!--例子：
+
+<ul class="nav nav-pills pull-right">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+<h3 class="text-muted">Project name</h3>
+
+例子end-->
+
+
+      </div>
+<!--==========================header部分end===============================================-->
+
+
+
+
+
+<!--=========================content部分==============================================-->
+      <div class = "content_main">
+        <!--输入content部分的html，可以用include-->
+
+<!--例子：
+
+<!--content左侧-->
+<div class="content_left">
+  <div class="panel panel-default">
+
+    <h2><%title%></h2>
+    <p class="headTexture">
+    	<img src="/img/headTexture.jpg" width="128 height="72"/>
+    </p>
+    <p class="lead">...</p>
+    
+    <p><a class="btn btn-lg btn-success" href="#" role="button">我的资源</a></p>
+
+    <p><a class="btn btn-lg btn-success" href="#" role="button">我的信息</a></p>
+
+  </div>
+</div><!--content_left-->
+
+<!--content中间-->
+<div class="content_center">
+  <ol class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Library</a></li>
+      <li class="active">Data</li>
+  </ol>
+  <div class="row_marketing">
+    <div class="col-lg-8">
+      <h4>2014-04-09:To KevinDust</h4>
+      <p>Hello KevinDust!</p>
+
+      <h4>2014-04-09:To KevinDust</h4>
+      <p>这是要搞定的节奏？？</p>
+
+      <h4>2014-04-09:To KevinDust</h4>
+      <p>还要修电脑@@晕死/p>
+
+    </div>
+  </div>
+
+</div><!--content_center-->
+例子end-->
+      </div><!--content_main-->
+<!--===============================content部分end=========================================-->
+
+
+
+
+
+
+<!--==========================footer部分==============================================-->
+      <div class="footer">
+        <!--输入header部分的html，可以用include-->
+
+<!--例子：
+
+<p>© Company 2013</p>
+        
+例子end-->
+      </div>
+<!--========================footer部分end=============================================-->
+
+
+
+    </div> <!-- /container -->
+<!--==========================body end=======================================================-->
+<!--=============================================================================================-->
+
+
+  <%- include footer %>
