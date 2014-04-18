@@ -1,14 +1,47 @@
 ﻿<%- include head %>
+
+<!--输入该页面对应的css和参数-->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+<link href="/stylesheets/page_userInfo.css" rel="stylesheet">
+<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+
 </head>
+<!--=========================head end============================================================-->
+
 <body>
-
-  <%- include public/headBar %>
-
-  <div>
-  <h2 align="center"> 资源介绍</h2>
-  </div>
-  <hr />
+<!--=========================content部分==============================================-->
+<br/><br/>
+<!--开头部分-->
+<div>
+<h2>资源介绍</h2>
+</div>
+<hr>
+<%- include public/headBar %>
   
+<!--content左侧-->
+<div class="content_left">
+  <div class="panel panel-default">
+
+    <h2><%title%></h2>
+    <p class="headTexture">
+    	<img src="/img/headTexture.jpg" width="128 height="72"/>
+    </p>
+    <p class="lead">...</p>
+    
+    <p><a class="btn btn-lg btn-success" href="#" role="button">我的资源</a></p>
+
+    <p><a class="btn btn-lg btn-success" href="#" role="button">我的信息</a></p>
+
+  </div>
+</div><!--content_left-->
+
+<!--content中间-->
+<div class="content_center">
   <!--列表信息--> 
 <div class="panel panel-primary">
    <div class="panel-heading">
@@ -28,8 +61,10 @@
 	  <p>职位：吊毛</p>
    </div>
 </div>
+</div>
+<!--content_center-->
 
-  
+<!--===============================content部分end=========================================-->  
   
   <br></br>
     <br></br>
