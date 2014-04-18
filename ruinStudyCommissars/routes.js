@@ -2,6 +2,7 @@
 var home = require('./routes/home');
 var sign = require('./routes/sign');
 var userInfo = require('./routes/userInfo');
+var upload = require('./routes/upload');
 
 module.exports = function(app){
 
@@ -15,4 +16,7 @@ module.exports = function(app){
 
 	//user
 	app.get('/userInfo', userInfo.userInfo_index);
+
+	// Upload Resources
+	app.get('/upload', upload.upload_get);
 }

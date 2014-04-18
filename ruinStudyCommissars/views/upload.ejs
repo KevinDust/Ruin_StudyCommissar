@@ -1,0 +1,71 @@
+<%- include head %>
+  <link href="stylesheets/upload.css" rel="stylesheet">
+ </head>
+<body>
+  <div class="upload">
+    <div class="container">
+        <form  method="post" action="/upload" enctype="multipart/form-data" role="form">
+          <div class="page-header">
+            <h1><fieldset>上传资源中心</fieldset></h1>
+          </div> 
+          <div class="form-group div_distance">
+            <span class="label label-info col-xs-5 input-sm text_font">填写资源名称</span>
+            <br/><br/>
+            <input type="text" class="form-control" id="fileTitle" placeholder="Your Resource">
+          </div>
+
+          <div class="form-group div_distance">
+            <span class="label label-info col-xs-5 input-sm text_font">资源简要介绍</span>
+            <br/><br/>
+            <textarea class="form-control" rows="3" id="introduce"></textarea>
+          </div>
+
+          <div class="form-group div_distance">
+           <span class="label label-info col-xs-5 input-sm text_font">请选择您的文件</span>
+            <br/><br/>
+            <input type="file" id="uploadFile">
+            <p class="help-block">上传资源须知：上传的文件不大于50M</p>
+          </div>
+
+          <div class="div_distance">
+            <span class="label label-success text_font">发布范围</span>
+          </div>
+          
+          <div class="scope">
+            <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>公开发布
+            </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                群组发布
+              </label>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> 群组1
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> 群组2
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> 群组3
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="btn_upload">
+            <button type="submit" class="btn btn-primary">上 传</button> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="submit" class="btn btn-default">取 消</button>    
+          </div>      
+        </form>
+     </div>
+  </div>
+ 
+<%- include footer %>
