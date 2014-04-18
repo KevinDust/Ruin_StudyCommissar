@@ -39,7 +39,7 @@ exports.reg_post = function(req,res){
 	    } 
 	    req.session.user = newUser; 
 	    req.flash('success', '注册成功'); 
-	    res.redirect('/'); 
+	    res.redirect('/home'); 
 	  }); 
 	});
 };
