@@ -1,8 +1,8 @@
-
 var home = require('./routes/home');
 var sign = require('./routes/sign');
 var userInfo = require('./routes/userInfo');
 var upload = require('./routes/upload');
+var fileList = require('./routes/fileList');
 
 module.exports = function(app){
 
@@ -19,4 +19,7 @@ module.exports = function(app){
 
 	// Upload Resources
 	app.get('/upload', upload.upload_get);
+	
+	// list Resources
+	app.get('/fileList', fileList.fileList_index);
 }
