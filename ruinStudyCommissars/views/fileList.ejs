@@ -1,0 +1,146 @@
+<!-- Bootstrap使用模板，
+     将例子部分删除，添加自己的代码即可使用
+    ================================================== -->
+
+
+<!--==========================head部分===========================================================-->
+<!--=============================================================================================-->
+  <%- include head %>
+
+  <!--输入该页面对应的css和参数-->
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+<link href="/stylesheets/page_userInfo.css" rel="stylesheet">
+<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+
+  
+  </head>
+<!--=========================head end============================================================-->
+<!--=============================================================================================-->
+
+
+
+<!--==========================body部分===========================================================-->
+<!--=============================================================================================-->
+  <body>
+    <!--整个页面分为三部分：header部分，content部分，footer部分-->
+    <div class="container">
+
+
+
+<!--==========================header部分==============================================-->
+      <div class="header">
+        <!--输入header部分的html，可以用include-->
+
+
+
+<ul class="nav nav-pills pull-right">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+<h3 class="text-muted">Project name</h3>
+
+
+
+
+      </div>
+<!--==========================header部分end===============================================-->
+
+
+
+
+
+<!--=========================content部分==============================================-->
+      <div class = "content_main">
+        <!--输入content部分的html，可以用include-->
+
+
+
+<!--content左侧-->
+<div class="content_left">
+  <div class="panel panel-default">
+
+    <h2><%title%></h2>
+    <p class="headTexture">
+    	<img src="/img/headTexture.jpg" width="128 height="72"/>
+    </p>
+    <p class="lead">...</p>
+    
+    <p><a class="btn btn-lg btn-success" href="#" role="button">我的资源</a></p>
+
+    <p><a class="btn btn-lg btn-success" href="#" role="button">我的信息</a></p>
+
+  </div>
+</div><!--content_left-->
+
+<!--content中间-->
+
+
+<div class="content_center">
+  <h2>资源列表</h2><br />
+  
+  <table class="table">
+    <!--读取10个资源-->
+    <% fileList.forEach(function(fList, index) { %>
+    <tr >
+      <td><a title="点击下载" href="#"><%= fList %></a></td>
+	  <td><a href="#">资源介绍</a></td>
+	  <td>上传者：<a href="#">vincent</a></td>
+	  <td>下载次数：100</td>
+	</tr>
+    <% }) %>
+    <!--读取10个资源完毕-->
+  </table>
+  
+  <!--上一页下一页-->
+  <ul class="pager">
+    <% if (!isFirstPage) { %>
+      <li><a title="上一页" href="?p=<%= page-1 %>">上一页</a></li>
+    <% } %>
+
+    <% if (!isLastPage) { %>
+      <li><a title="下一页" href="?p=<%= page+1 %>">下一页</a></li>
+    <% } %>
+  </ul>
+
+  
+ </div>
+
+
+<!--content_center-->
+
+      </div><!--content_main-->
+<!--===============================content部分end=========================================-->
+
+
+
+
+
+
+<!--==========================footer部分==============================================-->
+      <div class="footer">
+        <!--输入header部分的html，可以用include-->
+
+
+
+<p>© Company 2013</p>
+        
+
+      </div>
+<!--========================footer部分end=============================================-->
+
+
+
+    </div> <!-- /container -->
+<!--==========================body end=======================================================-->
+<!--=============================================================================================-->
+
+
+  <%- include footer %>

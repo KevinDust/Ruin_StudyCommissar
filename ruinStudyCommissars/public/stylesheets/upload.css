@@ -1,0 +1,37 @@
+/*html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 80px;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+}
+*/
+.upload .container {
+  width: auto;
+  max-width: 560px;
+  padding: 0 50px;
+}
+
+.scope{
+  margin-left: 100px;
+}
+
+.btn_upload{
+  margin-left: 150px;
+  margin-top:  40px;
+}
+
+.text_font{
+  font-size: 20px;
+}
+
+.div_distance{
+  margin-top: 40px;
+}
