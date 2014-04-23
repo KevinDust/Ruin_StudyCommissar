@@ -32,7 +32,8 @@ app.use(express.session({
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(partials());
 app.use(flash());
-//app.use(app.router);
+//app.use(express.bodyParser());
+app.use(express.bodyParser({uploadDir:'./tempFileUploads'}));
 
 // development only
 if ('development' == app.get('env')) {

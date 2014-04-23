@@ -27,8 +27,10 @@ module.exports = function(app){
 	app.get('/sourceInfo',sourceInfo.sourceInfo);
 
 	// Upload Resources
+	//app.get('/upload',checkLogin);
 	app.get('/upload', upload.upload_get);
 	
+	app.post('/upload',upload.upload_post);
 	// list Resources
 	app.get('/fileList', fileList.fileList_index);
 }
